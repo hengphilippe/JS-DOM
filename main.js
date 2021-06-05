@@ -23,28 +23,29 @@ const allTasks = document.querySelector('#book-list ul');
 	addForm.addEventListener('submit',function(e) {
 		// console.log("doing click");
 		e.preventDefault();
-		const newTask = addForm.querySelector('input[type="text"]').value;
+		const formInput = addForm.querySelector('input[type="text"]');
+		const newTask = formInput.value;
 		
 		// create elements (li span span)
 		const taskRow = document.createElement('li');
-		taskRow.innerHTML="<span class='name'>"+ newTask +"</span><span class='delete'>delete</span>";
 
-		// const newTaskName = document.createElement('span');
-		// const deleteTask = document.createElement('span');
+		const newTaskName = document.createElement('span');
+		const deleteTask = document.createElement('span');
 
-		// // set value
-		// newTaskName.textContent=newTask;
-		// deleteTask.textContent='delete';
+		// set value
+		newTaskName.textContent=newTask;
+		deleteTask.textContent='delete';
 
-		// // set style 
-		// newTaskName.classList.add('name');
-		// deleteTask.classList.add('delete');
+		// set style 
+		newTaskName.classList.add('name');
+		deleteTask.classList.add('delete');
 
-		// // append chile node
-		// taskRow.appendChild(newTaskName);
-		// taskRow.appendChild(deleteTask);
+		// append chile node
+		taskRow.appendChild(newTaskName);
+		taskRow.appendChild(deleteTask);
 
 		allTasks.appendChild(taskRow);
 
+		formInput.value = "";
 
 	});
