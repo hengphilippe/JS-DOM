@@ -62,6 +62,7 @@ function deleleList(){
 		// taskRow.appendChild(deleteTask);
 
 				allTasks.appendChild(taskRow);
+				addForm.querySelector('input[type="text"]').value='';
 				deleleList()
 		}
 			
