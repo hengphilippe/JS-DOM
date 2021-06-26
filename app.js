@@ -39,8 +39,3 @@
 // function simpleAction() {
 // 	alert ("Click On title");
 // }
-
-
-
-
-
