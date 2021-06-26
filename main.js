@@ -22,7 +22,7 @@
 			}
 		});
 
-		if (!(newTaskDuplicated)) {
+		if (!(newTaskDuplicated) && newTask != "") {
 			const taskRow = document.createElement('li');
 			const newTaskName = document.createElement('span');
 			const deleteTask = document.createElement('span');
