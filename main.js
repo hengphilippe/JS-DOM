@@ -72,4 +72,4 @@ function deleleList(){
 		
 	
 	});
-	let a = abc;
+	
