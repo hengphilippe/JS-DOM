@@ -29,13 +29,11 @@ function deleleList(){
 		e.preventDefault();
 		let existed;
 		const newTask = addForm.querySelector('input[type="text"]').value;
-		
+		console.log(newTask)
 		let allTask = allTasks.getElementsByClassName('name')
 		
 		for(let i=0 ; i < allTask.length ; i++){
-			let allTaskVal = allTask[i].innerHTML.toLowerCase();
-			let newTaskVal = newTask.toLowerCase();
-			allTask[i].innerHTML == newTask ? existed = true : existed = false
+			allTask[i].innerHTML === newTask ? existed = true : existed = false
 		}
 
 		if(existed){
