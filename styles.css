@@ -77,7 +77,18 @@ h1, h2{
 .delete:hover{
     background: #333;
 }
-
+.update {
+    float: right;
+    background: #fc3903;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin-right:8px
+}
+.update:hover{
+    background:#333;
+}
 #add-list{
     width: 400px;
     margin: 0 auto;

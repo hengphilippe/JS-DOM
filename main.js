@@ -15,7 +15,7 @@ function deleleList(){
 			let rec = e.target.parentNode;
 			
 			let allRec = rec.parentNode;
-			
+			console.log(rec , allRec)
 			allRec.removeChild(rec);
 			
 		})
@@ -125,6 +125,8 @@ function deleleList(){
 				if(checkedBox){
 					completeTasks.appendChild(checkAll.parentNode)
 					let delBtn = completeTasks.querySelector('.delete')
+
+
 					delBtn.style.display = "none"
 
 				} else {
@@ -163,5 +165,39 @@ function deleleList(){
 	checkAllTask()
 
 	///
+
+	// Update Text
+
+	const updateBtns = document.querySelectorAll('.update')
+
+	console.log(updateBtns)
+	for(let updateBtn of updateBtns){
+		updateBtn.addEventListener('click' , (e) => {
+			let rec = e.target.parentNode
+			let inputChild = rec.querySelector('input[type="text"]')
+			let inputChildValue = inputChild.value
+			let textChild = rec.querySelector('.name')
+		
+			if(textChild.style.display != "none"){
+				inputChild.style.display = "inline-block"
+				textChild.style.display = "none"
+				updateBtn.innerHTML = "Update"
+			} else {
+				textChild.style.display = "inline-block"	
+				if(inputChildValue === "" || inputChildValue == null){
+					alert("Please Input Some Text")
+				} else{
+					textChild.innerHTML = inputChildValue
+					console.log(textChild.innerHTML)
+				}
+			
+				
+				inputChild.style.display = "none"
+				updateBtn.innerHTML = "Edit"
+				
+			}
+		})
+	}
+
 
 	
