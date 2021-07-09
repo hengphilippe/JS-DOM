@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
     
+
     <title>JavaScript DOM Tutorials</title>
   </head>
   <body>
@@ -26,23 +25,47 @@
 	    	<h2 class="title">All todo list</h2>
 	    	<ul>
 	    		<li>
+					<input type="checkbox" />
 	    			<span class="name">Join coding class.</span>
+					<input type="text" style="display:none">
 	    			<span class="delete">delete</span>
+					<span class="update">Edit</span>
 	    		</li>
 	    		<li>
+					<input type="checkbox" />
 	    			<span class="name">Buy some drinks and foods.</span>
+					<input type="text" style="display:none">
 	    			<span class="delete">delete</span>
+					<span class="update">Edit</span>
 	    		</li>
 	    		<li>
+					<input type="checkbox" />
 	    			<span class="name">Play game online with my friend.</span>
+					<input type="text" style="display:none">
 	    			<span class="delete">delete</span>
+					<span class="update">Edit</span>
 	    		</li>
 	    		<li>
+					<input type="checkbox" />
 	    			<span class="name">Completed slide presentation.</span>
+					<input type="text" style="display:none">
 	    			<span class="delete">delete</span>
+					<span class="update">Edit</span>
 	    		</li>
 	    	</ul>
 	    </div>
+		
+		<div id="complete-tasks">
+			<span id="complete-title">
+				<h2>Completed Tasks</h2>
+				<span class="badge">0</span>
+				<span class="material-icons">expand_more</span>
+			</span>
+			
+			<ul>
+	    	
+	    	</ul>
+		</div>
 	    <form id="add-list">
 	        <input type="checkbox" id="hide" />
 	        <label for="hide">Hide all list</label>
